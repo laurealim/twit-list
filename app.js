@@ -23,10 +23,10 @@ server.listen(port, function(){
 
 
 const twitter = Twit({
-  consumer_key: '84SM4bUOoHPP8qwAIOMyocRwV',
-  consumer_secret: 'cwKZzOsDvAIED61nNiz7bNjSEEAqRzRDCiuiqmOKdto0eFJuVP',
-  access_token: '585440337-G1WJuqdp7K9pbdGO6HzS7aqFAvojLM4l3fsi2jtX',
-  access_token_secret: 'dn8VtSVvkKqLo9xuG9FiScug2cIQjQRqB4r3XaNXFKgRE'
+  consumer_key: '********', // yout twitter customer_key
+  consumer_secret: '********', // your consumer_secret
+  access_token: '********', // your access_token
+  access_token_secret: '********' // your access_token_secret
 });
 
 // const stream = twitter.stream('statuses/filter', { track: 'javascript' }, function(stream){
@@ -38,15 +38,6 @@ const twitter = Twit({
 
  // const stream = twitter.stream('statuses/filter', { track: 'javascript' });
  var stream = twitter.stream('statuses/filter', { track: 'javascript' });
-
-
-// Connection With the Socket
-// io.on('connect', function(socket){
-//   stream.on('tweet', function(tweet){
-//     socket.emit('tweets', tweet);
-//   });
-// });
-
 
 // listen to the twitter stream and tweet comes in send it to the client real time
 // twitter.stream('statuses/filter', { track: 'javascript' }, function(stream) {
